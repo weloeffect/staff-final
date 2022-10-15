@@ -1,0 +1,32 @@
+/* .bg{
+    background-color: rgb(218, 217, 217);
+    height: 100vh;
+} */
+.logo{
+    object-fit: contain;
+    height: 40px;
+}
+.login-header{
+    margin: auto;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+}
+
+.login-container{
+    position: relative;
+    padding: 20px;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.55);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.55);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.55);
+}
+
+.error{
+    color: red;
+    font-size: 20px;
+}

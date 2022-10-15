@@ -1,0 +1,26 @@
+.Footer{
+    height: 18vh;
+    margin-top: auto;
+    
+    border-top:0.5px solid grey ;
+    background: rgb(110, 121, 113);
+}
+.container{
+    margin: auto;
+    
+}
+.logo{
+    object-fit: contain;
+    height: 40px;
+
+}
+
+@media screen and (min-width: 1440px) {
+    .Footer{
+        height: 200px;
+       margin-top: 20px;
+        
+        border-top:0.5px solid grey ;
+        background: rgb(110, 121, 113);
+    }
+  }
