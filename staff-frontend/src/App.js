@@ -25,10 +25,10 @@ function App() {
     <Router>
       <Navbar />
         <Route path="/"  exact component= {Login} />
-        {/* <Route path="/signup"  exact component={!user ? Signup : RedirectView} />
+        <Route path="/signup"  exact component={!user ? Signup : RedirectView} />
         <Route path="/view"  component={user ? View_staff : RedirectLogin} />
         <Route path="/update/:id"  component={user ? Edit_staff : RedirectLogin} />
-        <Route path="/create"  component={user ? Add_staff : RedirectLogin} /> */}
+        <Route path="/create"  component={user ? Add_staff : RedirectLogin} />
     </Router>
     <Footer />
     </div>
