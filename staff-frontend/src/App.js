@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
-// import { useAuthContext } from './hooks/useAuthContext';
+import { useAuthContext } from './hooks/useAuthContext';
 import Navbar from './components/navbar';
 import "bootstrap/dist/css/bootstrap.css"
 import Edit_staff from  "./components/edit_staff"
