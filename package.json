@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd staff-frontend && npm run build",
     "install-frontend": "cd staff-frontend && npm install",
-    "heroku-postbuild": "npm install && npm run build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix staff-frontend && npm run build --prefix staff-frontend",
     "start": "nodemon server.js"
     
   },
