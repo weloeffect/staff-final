@@ -30,9 +30,9 @@ if (process.env.NODE_ENV === 'production'){
         res.sendFile(path.resolve(__dirname, 'staff-frontend', 'build', 'index.html'))
     })
 }
-// app.listen(port, () => {
-//     console.log(`Server is running on port: ${port}`)
-// })
-app.listen(process.env.PORT || 5000, () => {
-    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-  });
+app.listen(port, () => {
+    console.log(`Server is running on port: ${port}`)
+})
+// app.listen(process.env.PORT || 5000, () => {
+//     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+//   });
