@@ -13,7 +13,7 @@ import Signup from './components/signup';
 import RedirectView from './components/RedirectView';
 import RedirectLogin from './components/RedirectLogin';
 function App() {
-  // const { user } = useAuthContext();
+  const { user } = useAuthContext();
  
   return (
     <div className='Main'>
