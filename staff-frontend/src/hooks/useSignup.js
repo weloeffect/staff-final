@@ -1,10 +1,10 @@
 import { useState } from 'react'
-// import { useAuthContext } from './useAuthContext'
+import { useAuthContext } from './useAuthContext'
 import { useHistory } from 'react-router-dom';
 export function useSignup()  {
   const [error, setError] = useState(null)
   const [isLoading, setIsLoading] = useState(null)
-  // const { dispatch } = useAuthContext()
+  const { dispatch } = useAuthContext()
   const history = useHistory();
 
    async function signup(email, password)  {
@@ -27,7 +27,7 @@ export function useSignup()  {
       localStorage.setItem('user', JSON.stringify(json))
 
       
-      // dispatch({type: 'LOGIN', payload: json})
+      dispatch({type: 'LOGIN', payload: json})
 
       setIsLoading(false)
       

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "engines": {
     "node": "16.16.0"
-    },
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,6 @@
     "install-frontend": "cd staff-frontend && npm install",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix staff-frontend && npm run build --prefix staff-frontend",
     "start": "nodemon server.js"
-    
   },
   "keywords": [],
   "author": "",

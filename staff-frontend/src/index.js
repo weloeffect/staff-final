@@ -4,9 +4,8 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import { AuthContextProvider } from './context/AuthContext';
-import { Provider } from 'react-redux';
-import { store } from './app/store';
+import { AuthContextProvider } from './context/AuthContext';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
@@ -17,17 +16,17 @@ root.render(
   // </AuthProvider>
   
     
-  //   <AuthContextProvider> 
-  //     <BrowserRouter>
-  //        <App/>
-  //     </BrowserRouter>
-  // </AuthContextProvider>
+    <AuthContextProvider> 
+      <BrowserRouter>
+         <App/>
+      </BrowserRouter>
+  </AuthContextProvider>
 
-<Provider store={store}>
+/* <Provider store={store}>
   <BrowserRouter>
     <App/>
   </BrowserRouter>
-</Provider>
+</Provider> */
 
   
   

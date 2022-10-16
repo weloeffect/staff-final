@@ -1,34 +1,38 @@
 import React, { useState } from 'react'
 import "../css/id.css"
 import ErrorIcon from '@mui/icons-material/Error';
-import { Link } from 'react-router-dom';
-import { login } from '../features/auth/authSlice';
-import { useDispatch, useSelector } from 'react-redux';
+import { Link} from 'react-router-dom';
+
+import { useLogin } from '../hooks/useLogin';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  // const {login, isLoading, error} = useLogin();
+  const {login, isLoading, error} = useLogin();
  
-  const dispatch = useDispatch();
+
   
 
-  async function HandleSubmit(event){
+  async function HandleSubmit(e){
     const data = {
       email,
       password
     }
+    e.preventDefault();
+    await login(email, password)
     // window.alert('user logged in  sucessfully')
-    // await login(email, password)
-    event.preventDefault();
+    
     console.log(data);
-    dispatch(login(data));
+    
+   
 
   }
   return (
     <section className='Login'>
      <div className='login-header'>
-      <img src="https://yenettacode.com/wp-content/uploads/2022/04/YenettaWebBlack-2.png" alt="" className='logo'/>
+      {/* <img src="https://yenettacode.com/wp-content/uploads/2022/04/YenettaWebBlack-2.png" alt="" className='logo'/> */}
+      <img src="https://cdn-icons-png.flaticon.com/128/4598/4598130.png" alt="" className='logo'/>
+      
      </div>
      <div className='mt-5 login-container'>
       <div className='text-start'>
@@ -45,11 +49,11 @@ function Login() {
            <input type="password" class="form-control" id="password" onChange={(e) => setPassword(e.target.value)} value={password}/>
           </div>
           <div className='text-center mt-5'>
-          <button type='submit' class="btn btn-primary w-75 btn-lg" value="Submit" >Submit</button>
+          <button type='submit' class="btn btn-primary w-75 btn-lg" value="Submit" disabled={isLoading} >Submit</button>
           <div className='mt-3'>
             Not a registered user?<Link to="/signup">click here</Link> 
           </div>
-          {/* {error && <div className='error mt-3'><ErrorIcon/> {error}</div>} */}
+          {error && <div className='error mt-3'><ErrorIcon/> {error}</div>}
           </div>
      </form>
   </div>
