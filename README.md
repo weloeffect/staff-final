@@ -16,3 +16,5 @@
 3. The backend  will be up and running.
 
 **Note**: After performing **part 2** and **part 3** the full website will be running on any default browser.
+
+hosted url : https://staff-final.herokuapp.com/
